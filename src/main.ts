@@ -19,7 +19,11 @@ for (let i = 0; i < N_RECEIPIENTS; i++) {
 await faucetClient.fundAccount(payer.address(), 100_000_000);
 
 // Print out initial balances.
-console.log(`payer: ${await coinClient.checkBalance(payer)}`);
+console.log(
+  `payer address: ${payer.address()}, balance: ${await coinClient.checkBalance(
+    payer
+  )}`
+);
 console.log("");
 
 const run = async () => {
